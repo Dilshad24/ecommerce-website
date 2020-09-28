@@ -1,0 +1,320 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+}
+.header{
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	box-shadow: 1px 1px 12px rgba(47,47,47,0.40);
+}
+.header1{
+	background: #0382C5;
+	height: 24px;
+	width: 100%;
+	
+}
+.header1 h6{
+
+}
+.header1 ul {
+	list-style-type: none;
+	text-align: right; 
+	margin-top: -15px;	
+}
+.header1 ul li {
+	display: inline;
+	margin-right: 20px;
+}
+.header1 ul li a {
+	text-decoration: none;
+	font-family: arial;
+	font-size: 61%;
+	color: white;
+	padding: 0px;
+}
+
+.header1 ul li a:hover {
+	
+	color: black;
+	
+}
+
+.header1 h6 {
+Color: white;
+align-items: center;
+margin-left: 30px; 
+padding-top: 5px;
+}
+
+.header2{
+	height: 50px;
+	width: 100%;
+	background: #059BEB;
+	
+	display: inline-flex;
+}
+
+
+.header2 img{
+	height: 50px;
+	width: 50px;
+	padding-left: 25px;
+}
+
+.header2 h5{
+	text-decoration: none;
+	color: #070C5A;
+	padding-top: 18px;
+}
+
+.header2 input{
+	padding-left: 20px;
+	margin-left: 40px;
+	margin-top: 4px;
+	font-family: sans-serif;
+	border: 1px solid black;
+	height: 40px;
+	width: 600px;
+	border-radius: 10px 0px 0px 10px;
+	background: #F7F7F7;
+}
+.header2 button{
+		height: 42px;
+		margin-top: 4px;
+		border: 1px solid black;
+		padding-left: 5px;
+		padding-right: 8px;
+		width: 130px;
+		border-radius: 0px 10px 10px 0px;
+		background-color: orange;
+}
+
+.header2 a{
+	text-decoration: none;
+	font-family: arial;
+	margin-left: 40px;
+	margin-top: 15px;
+	color: white;
+}
+.header2 a:hover {
+	color: black;
+	
+}
+
+.signup{
+	
+
+	margin-top: 5px;
+	
+	
+}
+.signup img{
+
+	width: 40PX;
+	height: 40PX;
+}
+.signup a{
+	margin-left: -24px;
+}
+
+.container{
+	width: 100%;
+	padding-top: 90px;
+	display: flex;
+	margin-bottom: 10px;
+}
+.container1{
+	height: 100%;
+	width: 300px;
+	margin-left: 10px;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+.div21{
+	background: #EBEBEB;
+	
+}
+.div21 p{
+	text-decoration: none;
+	margin-left: 20px;
+	padding: 1px;
+	color: black;
+	padding-bottom: 10px;
+	padding-top: 30px;
+
+}
+
+.p2 {
+	font-size: 80%;
+}
+.ull {
+	padding-bottom: 40px;
+}
+.div21 ul li {
+	margin-top: 10px;
+}
+.div21 ul li a{
+	color: grey;
+	text-decoration: none;
+	margin-left: 30px;
+
+}
+.div21 ul li a:hover{
+	color: white;
+	text-decoration: none;
+	margin-left: 30px;
+
+}
+
+
+.container2{
+	height: 100%;
+	width: 80%;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+
+}
+.products{
+	height: 300px;
+	width: 100%;
+	margin: 5px;
+	display: flex;
+	border-top: 2px solid #F5F5F5;
+}
+.products1{
+	height: 300px;
+	width: 300px;
+}
+.slider-box{
+	height: 300px;
+	width: 290px;
+	position: relative;
+	background: #ffffff;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	
+}
+.img-box{
+	height: 270px;
+}
+.img-box img{
+	height: auto;
+	max-width: 100%;
+	max-height:100%;
+}
+
+.slider-box:hover{
+	box-shadow:2px 2px 12px rgba(47,47,47,0.40);
+}
+.slider-box:hover .img-box img{
+	transform: scale(1.07);
+	transition: all case 0.3s;
+}
+
+.products2{
+	height: 100%;
+	width: 380px;
+	padding-left: 10px;
+}
+.products2 a{
+	text-decoration: none;
+	color: black;
+}
+.products2 a:hover{
+	color: blue;
+}
+.products2 h1{
+	margin-top: 15px;
+}
+.rating-review{
+
+	display: flex;
+}
+
+.rating1{
+	margin:5px;
+	background: green;
+	color: white;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 4px;
+}
+.rating2{
+	margin:5px;
+	margin-top: 10px;
+
+}
+.rating3{
+
+	margin-top: 10px;
+}
+.and{
+	margin-top: 10px;
+	margin-left: 8px;
+}
+.review1{
+	margin:5px;
+	margin-top: 10px;
+	margin-left: 8px;
+}
+.review2{
+
+	margin-top: 10px;
+}
+.specs ul{
+	margin-left: 30px;
+}
+.products3{
+	height: 100%;
+	width: 400px;
+	padding-left: 20px;
+
+}
+.price{
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+.cut{
+	display: flex;
+	margin-bottom: 10px;
+}
+.cut-price{
+	color: grey;
+	text-decoration: line-through;
+	
+}
+.off{
+	color: green;
+	margin-left: 10px;
+}
+.emi{
+}
+.footer{
+	height: 45px;
+	width: 100%;
+	background: #059BEB;
+	cursor: pointer;
+}
+.footer h4{
+	font-size: 70%;
+	padding-top: 12px;
+	padding-left: 10px;
+
+}
+.footer p{
+margin-top: -10px;
+	float: right;
+	padding-right: 20px;
+	font-size: 70%;
+}

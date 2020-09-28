@@ -1,0 +1,115 @@
+.backtoprevious{
+	padding-top: 85px;
+	height: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+	
+}
+.btp{
+	height: 34px;
+	width: 100%;
+	background: lightgrey;
+	border-radius: 5px;
+	font-family:  arial;
+	padding-top: 10px;
+	display: inline-flex;
+	
+
+}
+.btp a{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}
+.btp a:hover{
+	
+	color: white;
+	border-radius: 1px solid black;
+	
+}
+#shop11{
+	margin-left: 25px;
+	margin-right: 20px;
+}
+#b2home{
+	margin-top: 1px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: grey;
+	font-size: 18px;
+}
+#b2cart{
+	margin-top: 1px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: grey;
+	font-size: 18px;
+}
+#slash1{
+	margin-right: 10px;
+}
+.btp p{
+	font-weight: bold;
+	font-size: 18px;
+	margin-right: 5px;
+	margin-left: 5px;
+	color: grey;
+	cursor: pointer;
+
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 560px) {
+
+.backtoprevious{
+	padding-top: 80px;
+	height: 30px;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+}
+.btp{
+	height: 25px;
+	padding-top: 5px;
+	border-radius: 4px;
+}
+.btp a{
+	color: black;;
+	font-size: 16px;
+}
+#shop11{
+	margin-left: 25px;
+	margin-right: 20px;
+}
+#b2home{
+	margin-top: 1px;
+	margin-left: 7px;
+	margin-right: 7px;
+	color: grey;
+	font-size: 14px;
+}
+#b2cart{
+	margin-top: 1px;
+	margin-left: 7px;
+	margin-right: 7px;
+	color: grey;
+	font-size: 14px;
+}
+#slash1{
+	margin-right: 10px;
+}
+.btp p{
+
+	font-size: 14px;
+	margin-right: 5px;
+	margin-left: 5px;
+	color: grey;
+	cursor: pointer;
+
+}
