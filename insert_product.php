@@ -1,6 +1,7 @@
 <?php
-include("db.php");
+
 include("functions/functions.php");
+$con=db();
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +38,7 @@ include("functions/functions.php");
 					<option value="">Select</option>
 						<?php
 							$get_p_cat= "select * from  product_categories"; 
-							$run_p_cats=mysqli_query($connn,$get_p_cat);
+							$run_p_cats=mysqli_query($con,$get_p_cat);
 							while ($row_p_cats=mysqli_fetch_array($run_p_cats)) {
 								$p_cat_id=$row_p_cats['p_cat_id'];
 								$p_cat_title=$row_p_cats['p_cat_title'];
@@ -58,7 +59,7 @@ include("functions/functions.php");
 					<option value="">Select</option>
 					<?php
 						$get_cat= "select * from  categories"; 
-						$run_cats=mysqli_query($connn,$get_cat);
+						$run_cats=mysqli_query($con,$get_cat);
 						while ($row_cats=mysqli_fetch_array($run_cats)) {
 							$cat_id=$row_cats['cat_id'];
 							$cat_title=$row_cats['cat_title'];
@@ -169,8 +170,8 @@ if(isset($_POST['submit2'])) {
 	
 	$insert_product="insert into  products( p_cat_id, cat_id, date, product_title,product_color1,product_color2,product_color3, product_img1, product_img2, product_img3, product_img4, product_img5, product_img6, product_price, product_keywords, product_desc)
 	 values('$product_cat','$cat',NOW(),'$product_title','$product_color1','$product_color2','$product_color3','$product_img1','$product_img2','$product_img3','$product_img4','$product_img5','$product_img6','$product_price','$product_keywords','$product_desc')";
-	$run_product=mysqli_query($connn,$insert_product);
-
+	$run_product=mysqli_query($con,$insert_product);
+	echo($run_product);
 	if ($run_product) {
 		echo "<script>alert('Product has been inserted Sucessfull')</script>";
 		echo "<script>window.open('insert_product.php','_self')</script>";

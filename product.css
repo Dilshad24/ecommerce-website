@@ -1,3 +1,6 @@
+*{
+
+}
 .backtoprevious{
 	padding-top: 85px;
 	height: 40px;
@@ -167,7 +170,7 @@
 	transition: 0.3s;
 	width: 245px;
 	border:none; 
-	padding-bottom:12px;
+	padding-bottom:13px;
 }
 .buy-btn{
 	display: block;
@@ -325,6 +328,9 @@
 /*---------------------------------------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 560px) {
+	*{
+		overflow-x: hidden;
+	}
 	.backtoprevious{
 	padding-top: 80px;
 	height: 30px;
@@ -377,6 +383,7 @@
 		margin:0px;
 		padding: 0px;
 		padding-top: 45px;
+
 			}
 	.productcontainer1st{
 	   	height: 425px;
@@ -384,19 +391,20 @@
 		margin-left: 0px;
 		position: static;
 		padding-left: 0px;
-
+		
 
 	}
 
 	.card{
-		width: 420px;
+		width: 400px;
 		height: 412px;
 		background: #f1f1f1;
 		position: absolute;
 		border: 1px solid grey;	
-		margin-left: auto;
+		margin-left: 0;
 		margin-right: auto;
 		margin-left: 5px;
+		overflow: hidden;
 
 
 	}
@@ -505,6 +513,7 @@
 		margin-left: 0px;
 		margin-right: 0px;
 		margin-top: 0px;
+		overflow-y: hidden;
 
 	}
 	.pcmainp {
@@ -524,6 +533,7 @@
 		padding-right: 3px;
 		margin-top: -4px;
 		border-radius: 4px;
+
 
 	}
 	.productpagerating a{
@@ -606,6 +616,7 @@
 	.productpagediscription{
 		margin-top: 20px;
 		margin-left: 10px;	
+		overflow-y: visible;
 	}
 	.discp1{
 		font-weight: bold;

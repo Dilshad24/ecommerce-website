@@ -3,8 +3,9 @@
 error_reporting(0);
 ?>
 <?php
-include("db.php");
+// include("db.php");
 include("functions/functions.php");
+$con=db();
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -134,7 +135,7 @@ color:red;
 				$check_email=$_SESSION['email'];
 				$connection_cart="select * from cart where email='$check_email'";
 				// $connection_cart="select * from cart where ip_add='$ip_add'";
-				$run_cart=mysqli_query($connn,$connection_cart);
+				$run_cart=mysqli_query($con,$connection_cart);
 				$count=mysqli_num_rows($run_cart);
 				}
 			?>
@@ -159,12 +160,16 @@ color:red;
 		            	$pro_qty=$row_cart['qty'];
 		            	$check_email=$_SESSION['email'];
 		            	$get_products= "select * from products where id='$pro_id'";
-		            	$run_products=mysqli_query($connn,$get_products);
+		            	$run_products=mysqli_query($con,$get_products);
 		            	while($row_products= mysqli_fetch_array($run_products)){
 		            		$product_title=$row_products['product_title'];
 		            		$product_img1=$row_products['product_img1'];
 		            		$product_price=$row_products['product_price'];
-		            		$Sub_total=$row_products['product_price']*$pro_qty;	
+		            		
+		            		$Sub_total=$product_price*$pro_qty;	
+		            		
+		            		
+		            	
 		            		$total+=$Sub_total;
 		            	}
 		            ?>
@@ -176,7 +181,10 @@ color:red;
 
 		                <th><p>RS <?php echo $Sub_total ?></p></th>
 		                <!---<th><button class="remove_btn"><p>Remove</p></button></th> ----->
-		                <th><input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>"></th>
+		                <th><input id='checkb' type="checkbox" name="remove[]" onKeyPress="javascript:update(this);" value="<?php echo $pro_id; ?>"></th>
+		                <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+		          
 		            </tr>
 		            <?php } } ?>
 		        </table>
@@ -197,12 +205,12 @@ color:red;
 
 		<?php  
 		        	function update_cart(){
-		        		$db=mysqli_connect('localhost','root',"","website");
+		        		// $db=mysqli_connect('localhost','root',"","website");
 		        		if(isset($_POST['update'])){
 		        			$check_email=$_SESSION['email'];
 		        			foreach($_POST['remove'] as $remove_id) {
 		        				$delete_product="delete from cart where p_id='$remove_id' AND email='$check_email'";
-		        				$run_delete=mysqli_query($db,$delete_product);
+		        				$run_delete=mysqli_query(db(),$delete_product);
 		        				if ($run_delete) {
 		        					echo "<script>window.open('cart.php','_self') </script>";
 		        				}
@@ -250,6 +258,11 @@ color:red;
 			</div>
 	</div><!------ footer Ends------->	
 
+
 	
 </body>
+
+
+
+
 </html>

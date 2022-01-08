@@ -1,6 +1,6 @@
 <?php
-include("db.php");
-include("functions/functions.php");
+include("functions/functions.php");;
+$con=db();
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -280,7 +280,7 @@ include("functions/functions.php");
 			?>						
 							<?php
 										$get_products= "Select * from products order by 1 DESC LIMIT $start_from,$per_slide";
-										$run_products=mysqli_query($connn,$get_products);
+										$run_products=mysqli_query($con,$get_products);
 										while ($row_products= mysqli_fetch_array($run_products)) {
 											$pro_id=$row_products['id'];
 											$pro_title=$row_products['product_title'];
@@ -322,14 +322,14 @@ include("functions/functions.php");
 			if(isset($_GET['p_cat'])){
 	        $p_cat_id = $_GET['p_cat'];
 	        $get_p_cat ="select * from product_categories where p_cat_id='$p_cat_id'";
-	        $run_p_cat = mysqli_query($connn,$get_p_cat);
+	        $run_p_cat = mysqli_query($con,$get_p_cat);
 	        $row_p_cat = mysqli_fetch_array($run_p_cat);
 	        $p_cat_title = $row_p_cat['p_cat_title'];
 	        $p_cat_desc = $row_p_cat['p_cat_desc'];
         	$start_from=0;
 			$per_slide=8;
 			$get_products= "Select * from products where p_cat_id='$p_cat_id'";
-			$run_products=mysqli_query($connn,$get_products);
+			$run_products=mysqli_query($con,$get_products);
             $total_records = mysqli_num_rows($run_products);
          	for ($start_from; $start_from <=$total_records ; $start_from=$start_from+$per_slide) { 
 			echo "
@@ -341,7 +341,7 @@ include("functions/functions.php");
 			?>						
 								<?php
 										$get_products= "Select * from products where p_cat_id='$p_cat_id' order by 1 DESC LIMIT $start_from,$per_slide";
-										$run_products=mysqli_query($connn,$get_products);
+										$run_products=mysqli_query($con,$get_products);
 										while ($row_products= mysqli_fetch_array($run_products)) {
 											$pro_id=$row_products['id'];
 												$pro_title=$row_products['product_title'];
@@ -381,14 +381,14 @@ include("functions/functions.php");
 			if(isset($_GET['cat'])){
 	        $cat_id = $_GET['cat'];
 	        $get_cat ="select * from categories where cat_id='$cat_id'";
-        	$run_cat = mysqli_query($connn,$get_cat);
+        	$run_cat = mysqli_query($con,$get_cat);
         	$row_cat = mysqli_fetch_array($run_cat);
 	        $cat_title = $row_cat['cat_title'];
 	        $cat_desc = $row_cat['cat_desc'];
         	$start_from=0;
 			$per_slide=8;
 			$get_products= "Select * from products where cat_id='$cat_id'";
-			$run_products=mysqli_query($connn,$get_products);
+			$run_products=mysqli_query($con,$get_products);
             $total_records = mysqli_num_rows($run_products);
          	for ($start_from; $start_from <=$total_records ; $start_from=$start_from+$per_slide) { 
 			echo "
@@ -400,7 +400,7 @@ include("functions/functions.php");
 			?>						
 								<?php
 										$get_products= "Select * from products where cat_id='$cat_id' order by 1 DESC LIMIT $start_from,$per_slide";
-										$run_products=mysqli_query($connn,$get_products);
+										$run_products=mysqli_query($con,$get_products);
 										while ($row_products= mysqli_fetch_array($run_products)) {
 											$pro_id=$row_products['id'];
 												$pro_title=$row_products['product_title'];

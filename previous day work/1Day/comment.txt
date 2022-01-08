@@ -1,0 +1,7 @@
+image and icon will not show because i organized every thing in there respective  folder 
+
+product image are in product image folder
+logos are in "logos" named folder 
+etc
+
+and many new changes have been done .....

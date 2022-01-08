@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+// include("db.php");
 include("functions/functions.php");
 
 ?> 
@@ -114,7 +114,7 @@ include("functions/functions.php");
 		        <!------ Slide1 starts ------>
 		        <?php
 					$get_slide= "select * from  slider limit 0,1"; 
-					$run_slider=mysqli_query($connn,$get_slide);
+					$run_slider=mysqli_query(db(),$get_slide);
 			      	while ($row_slide=mysqli_fetch_array($run_slider)) {
 			        	$slide_name=$row_slide['slide_name'];
 			        	$slide_image=$row_slide['slide_image'];
@@ -128,13 +128,13 @@ include("functions/functions.php");
 			    <!------ Slide2 starts ------>
 			    <?php
 			        $get_slide= "select * from  slider limit 1,1"; 
-					$run_slider=mysqli_query($connn,$get_slide);
+					$run_slider=mysqli_query(db(),$get_slide);
 			      	while ($row_slide=mysqli_fetch_array($run_slider)) {
 			        	$slide_name=$row_slide['slide_name'];
 			        	$slide_image=$row_slide['slide_image'];
 			    		echo "
 			    		<div class='slide'>
-			         		 <a href='main.html'><img src='$slide_image' alt=''></a>
+			         		 <a href='index.php'><img src='$slide_image' alt=''></a>
 			        	</div>
 						";
 					}
@@ -142,13 +142,13 @@ include("functions/functions.php");
 			    <!------ Slide3 starts ------>
 			   	<?php
 			        $get_slide= "select * from  slider limit 2,1"; 
-					$run_slider=mysqli_query($connn,$get_slide);
+					$run_slider=mysqli_query(db(),$get_slide);
 			      	while ($row_slide=mysqli_fetch_array($run_slider)) {
 			        	$slide_name=$row_slide['slide_name'];
 			        	$slide_image=$row_slide['slide_image'];
 			    		echo "
 			    		<div class='slide'>
-			         		 <a href='main.html'><img src='$slide_image' alt=''></a>
+			         		 <a href='index.php'><img src='$slide_image' alt=''></a>
 			        	</div>
 						";
 					}
@@ -156,13 +156,13 @@ include("functions/functions.php");
 			    <!------ Slide4 starts ------>
 			    <?php
 			        $get_slide= "select * from  slider limit 3,1"; 
-					$run_slider=mysqli_query($connn,$get_slide);
+					$run_slider=mysqli_query(db(),$get_slide);
 			      	while ($row_slide=mysqli_fetch_array($run_slider)) {
 			        	$slide_name=$row_slide['slide_name'];
 			        	$slide_image=$row_slide['slide_image'];
 			    		echo "
 			    		<div class='slide'>
-			         		 <a href='main.html'><img src='$slide_image' alt=''></a>
+			         		 <a href='index.php'><img src='$slide_image' alt=''></a>
 			        	</div>
 						";
 					}
@@ -170,13 +170,13 @@ include("functions/functions.php");
 			    <!------ Slide5 starts ------>
 			    <?php
 			        $get_slide= "select * from  slider limit 4,1"; 
-					$run_slider=mysqli_query($connn,$get_slide);
+					$run_slider=mysqli_query(db(),$get_slide);
 			      	while ($row_slide=mysqli_fetch_array($run_slider)) {
 			        	$slide_name=$row_slide['slide_name'];
 			        	$slide_image=$row_slide['slide_image'];
 			    		echo "
 			    		<div class='slide'>
-			         		 <a href='main.html'><img src='$slide_image' alt=''></a>
+			         		 <a href='index.php'><img src='$slide_image' alt=''></a>
 			        	</div>
 						";
 					}
@@ -195,7 +195,7 @@ include("functions/functions.php");
 		<div class="div4"><!-----product-poster1---------->
 			<?php
 			        $get_p_poster= "select * from   product_poster limit 0,1"; 
-					$run_p_poster=mysqli_query($connn,$get_p_poster);
+					$run_p_poster=mysqli_query(db(),$get_p_poster);
 			      	while ($row_p_poster=mysqli_fetch_array($run_p_poster)) {
 			        	$poster_name=$row_p_poster['p_poster_name'];
 			        	$poster_image=$row_p_poster['p_poster_image'];
@@ -208,7 +208,7 @@ include("functions/functions.php");
 		<div class="div5">
 			<?php
 			        $get_p_poster= "select * from   product_poster limit 1,1"; 
-					$run_p_poster=mysqli_query($connn,$get_p_poster);
+					$run_p_poster=mysqli_query(db(),$get_p_poster);
 			      	while ($row_p_poster=mysqli_fetch_array($run_p_poster)) {
 			        	$poster_name=$row_p_poster['p_poster_name'];
 			        	$poster_image=$row_p_poster['p_poster_image'];
@@ -221,7 +221,7 @@ include("functions/functions.php");
 		<div class="div6">
 			<?php
 		        $get_p_poster= "select * from   product_poster limit 2,1"; 
-				$run_p_poster=mysqli_query($connn,$get_p_poster);
+				$run_p_poster=mysqli_query(db(),$get_p_poster);
 			    while ($row_p_poster=mysqli_fetch_array($run_p_poster)) {
 			       	$poster_name=$row_p_poster['p_poster_name'];
 			       	$poster_image=$row_p_poster['p_poster_image'];
@@ -260,7 +260,7 @@ include("functions/functions.php");
 		<div class="pimagelink1">
 			<?php
 		        $get_p_poster= "select * from   product_poster limit 3,1"; 
-				$run_p_poster=mysqli_query($connn,$get_p_poster);
+				$run_p_poster=mysqli_query(db(),$get_p_poster);
 			    while ($row_p_poster=mysqli_fetch_array($run_p_poster)) {
 			       	$poster_name=$row_p_poster['p_poster_name'];
 			       	$poster_image=$row_p_poster['p_poster_image'];
@@ -273,7 +273,7 @@ include("functions/functions.php");
 		<div class="pimagelink1">
 			<?php
 		        $get_p_poster= "select * from   product_poster limit 4,1"; 
-				$run_p_poster=mysqli_query($connn,$get_p_poster);
+				$run_p_poster=mysqli_query(db(),$get_p_poster);
 			    while ($row_p_poster=mysqli_fetch_array($run_p_poster)) {
 			       	$poster_name=$row_p_poster['p_poster_name'];
 			       	$poster_image=$row_p_poster['p_poster_image'];
@@ -286,7 +286,7 @@ include("functions/functions.php");
 		<div class="pimagelink1 removeinmobile">
 			<?php
 		        $get_p_poster= "select * from   product_poster limit 5,1"; 
-				$run_p_poster=mysqli_query($connn,$get_p_poster);
+				$run_p_poster=mysqli_query(db(),$get_p_poster);
 			    while ($row_p_poster=mysqli_fetch_array($run_p_poster)) {
 			       	$poster_name=$row_p_poster['p_poster_name'];
 			       	$poster_image=$row_p_poster['p_poster_image'];
@@ -366,7 +366,7 @@ include("functions/functions.php");
 		<div class="pimagelink1">
 			<?php
 		        $get_p_poster= "select * from   product_poster limit 6,1"; 
-				$run_p_poster=mysqli_query($connn,$get_p_poster);
+				$run_p_poster=mysqli_query(db(),$get_p_poster);
 			    while ($row_p_poster=mysqli_fetch_array($run_p_poster)) {
 			       	$poster_name=$row_p_poster['p_poster_name'];
 			       	$poster_image=$row_p_poster['p_poster_image'];
@@ -379,7 +379,7 @@ include("functions/functions.php");
 		<div class="pimagelink1">
 			<?php
 		        $get_p_poster= "select * from   product_poster limit 4,1"; 
-				$run_p_poster=mysqli_query($connn,$get_p_poster);
+				$run_p_poster=mysqli_query(db(),$get_p_poster);
 			    while ($row_p_poster=mysqli_fetch_array($run_p_poster)) {
 			       	$poster_name=$row_p_poster['p_poster_name'];
 			       	$poster_image=$row_p_poster['p_poster_image'];
@@ -392,7 +392,7 @@ include("functions/functions.php");
 		<div class="pimagelink1 removeinmobile">
 			<?php
 		        $get_p_poster= "select * from   product_poster limit 5,1"; 
-				$run_p_poster=mysqli_query($connn,$get_p_poster);
+				$run_p_poster=mysqli_query(db(),$get_p_poster);
 			    while ($row_p_poster=mysqli_fetch_array($run_p_poster)) {
 			       	$poster_name=$row_p_poster['p_poster_name'];
 			       	$poster_image=$row_p_poster['p_poster_image'];
@@ -416,7 +416,7 @@ include("functions/functions.php");
 		 <div class="contentcode12"><a href=""><img src="images/aa1.png"></a></div>
 	</div><!------ additionalcontent ends------->
 	<div class="aditionallist"><!------ aditionallist starts------->
-		<img src="images/footerup.png" alt="">
+	<!-- 	<img src="images/footerup.png" alt=""> -->
 	</div><!------ aditionallist Ends------->
 	<div class="footer"><!------ footer starts------->
 		<div class="footerp1 footerp">

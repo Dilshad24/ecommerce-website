@@ -1,0 +1,450 @@
+*{
+	
+	margin: 0;
+	padding: 0;
+
+}
+.header{
+	background: #0382C5;
+	height: 24px;
+	width: 100%;
+}
+.header h6{
+
+}
+.header ul {
+	
+	list-style-type: none;
+	text-align: right;
+	margin-top: -23px;
+	
+}
+.header ul li {
+	display: inline;
+	margin-right: 20px;
+}
+.header ul li a {
+	text-decoration: none;
+	font-family: arial;
+	font-size: 61%;
+	color: white;
+	padding: 0px;
+}
+
+.header ul li a:hover {
+	
+	color: black;
+	
+}
+
+.header h6 {
+ Color: white;
+ margin: 10px;
+margin-top: 15px;
+padding-top: 5px;
+margin-left: 30px; 
+}
+
+.contaner{
+	/*border: 1px solid black;*/
+	display: grid;
+	grid-template-rows: 50px 400px 200px 420px;
+	grid-template-columns: 250px repeat(3,1fr);
+	grid-gap: 5px;
+	grid-auto-rows: 150px;
+}
+.div1{ background: #059BEB;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	display: inline-flex;
+	
+	
+}
+.div2{ 
+	grid-row: 2/4;
+	display: grid;
+	grid-template-rows: 490px;
+	grid-row-gap: 5px; 
+	margin-left: 10px;
+	border-radius: 5px;
+	margin-right: 10px;
+	
+ }
+.div3{ 
+	/*grid-column-start: 2;*/
+	/*grid-column-end: 4;*/
+	grid-column: 2/5;
+	overflow: hidden;
+	margin-right: 5px;
+
+ }
+.div4{ 
+	height: 200px;
+}
+.div5{  }
+.div6{ 
+		margin-right: 10px;
+
+ }
+.div7{
+	
+	grid-column: 1/5;
+	margin: 10px ;
+	display: grid;
+	grid-template-rows: 60px ;
+ }
+/* header 2 starts*/
+.div1 img{
+	height: 50px;
+	width: 50px;
+	padding-left: 25px;
+}
+
+.div1 h5{
+	text-decoration: none;
+	color: #070C5A;
+	padding-top: 18px;
+}
+
+.div1 input{
+	padding-left: 20px;
+	margin-left: 40px;
+	margin-top: 4px;
+	font-family: sans-serif;
+	border: 1px solid black;
+	height: 40px;
+	width: 600px;
+	border-radius: 10px 0px 0px 10px;
+	background: #F7F7F7;
+}
+.div1 button{
+		height: 42px;
+		margin-top: 4px;
+		border: 1px solid black;
+		padding-left: 5px;
+		padding-right: 8px;
+		width: 130px;
+		border-radius: 0px 10px 10px 0px;
+		background-color: orange;
+}
+
+.div1 a{
+	text-decoration: none;
+	font-family: arial;
+	margin-left: 40px;
+	margin-top: 15px;
+	color: white;
+}
+.div1 a:hover {
+	color: black;
+	
+}
+
+.signup{
+	
+
+	margin-top: 5px;
+	
+	
+}
+.signup img{
+
+	width: 40PX;
+	height: 40PX;
+}
+.signup a{
+	margin-left: -24px;
+}
+
+/* header 2 ends*/
+/* side bar start  div2 */
+.div21{
+	background: #EBEBEB;
+	
+}
+.div22{ 	
+
+grid-gap: 5px;
+margin-top: 5px;
+}
+
+.div21 p{
+	text-decoration: none;
+	margin-left: 20px;
+	padding: 1px;
+	color: black;
+	margin-top: 20px;
+	padding-bottom: 10px;
+
+}
+
+.p2 {
+	font-size: 80%;
+	
+
+}
+.div21 ul li {
+	margin-top: 10px;
+}
+.div21 ul li a{
+	color: grey;
+	text-decoration: none;
+	margin-left: 30px;
+
+}
+.div21 ul li a:hover{
+	color: white;
+	text-decoration: none;
+	margin-left: 30px;
+
+
+}
+
+.div22 img{
+	height: 100%;
+	width: 100%;
+}
+/* side bar end */
+/* slide show strat in div3 */
+.navigation{
+  position: absolute;
+  top: 71%;
+  left: 60%;
+  transform: translateX(-50%);
+  display: flex;
+  background: none;
+}
+.bar{
+  width: 50px;
+  height: 10px;
+  border: 2px solid #808B96 ;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  background: none;
+}
+.bar:hover{
+  background: #fff ;
+   border: 2px solid black;
+   width: 55px;
+  height: 12px;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+/* slide show end  */
+/* 1st Deals section start div4 div5 div6*/
+.div4 img{
+	height: 100%;
+	width: 100%;
+}
+.div5 img{
+	height: 100%;
+	width: 100%;
+}
+.div6 img{
+	height: 100%;
+	width: 100%;
+}
+
+
+/* Deals section end */
+
+/* hamburger nav bar start */
+
+
+
+/* hamburger nav bar end */
+/* 1st product section */
+.div71{
+	
+	background: #C4C4C4;
+	display: flex;
+}
+.div72{
+	border: 1px solid black;
+	display: flex;
+}
+.div71 h2{
+	margin:15px;
+	margin-left: 40px;
+}
+.div71 img{
+	height: 40px;
+	width: 40px;
+	margin-top: 8px;
+	margin-left: 40px;
+}
+.div71 h3{
+	margin:18px;
+	font-size: 150%;
+	margin-left: 10px;
+}
+.div71 a{
+	text-decoration: none;
+	font-size: 120%;
+	color:white;
+	font-family: arial;
+	background: #0382C5;
+	padding-top: 15PX;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 100px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 4PX;
+	box-shadow: 3PX black;
+
+	
+}	
+.div71 a:HOVER{
+	background: #059BEB;
+	color: black;
+
+}	
+/* 1st product section end */
+.card{
+	width: 240px;
+	height: 340px;
+	background: #f1f1f1;
+	
+	border: 1px solid grey;	
+	margin-left: 10px;
+	margin-top: 10PX;
+	
+
+}
+.top-section{
+	height: 220px;
+	overflow: hidden;
+	background: #fff;
+	text-align: center;
+	position: relative;
+
+}
+#image-container{
+	width: 110px;
+	height: 130px;
+	
+	margin-top: 15px;
+
+}
+
+.card-nav{
+	text-align: center;
+}
+.card-nav img{
+	width: 50px;
+	height: 58px;
+	border: 1px solid #ddd;
+	margin: 8px 2px;
+	cursor: pointer;
+	transition: 0.3s;
+
+}
+.card-nav img:hover{
+	border-color: #6ab04c;
+
+}
+
+.product-info{
+	padding: 10px;
+	padding-top: 5px;
+
+
+}
+
+.product-name{
+	text-transform: uppercase;
+	font-size: 17px;
+	color:#333;
+	font-family: arial;
+
+
+}
+.product-rating{
+	margin-top: 5px;
+}
+.product-price{
+	font-size: 14px;
+	font-weight: bold;
+	
+}
+.product-price-cut{
+	font-size: 12px;
+	color: grey;
+	text-decoration: line-through;
+	margin-left: 60px;
+	margin-top: -15px;
+	margin-bottom: 8px;
+}
+.product-price-cut-percentage{
+	font-size: 12px;
+	color: black;
+	margin-left: 110px;
+	margin-top: -22px;
+	margin-bottom: 10px;
+
+}
+.cart-btn{
+	display: block;
+	background: #0382C5;
+	text-align: center;
+	color: #FFF;
+	padding: 10px;
+	transition: 0.3s;
+}
+
+.cart-btn:hover{
+	background: #333;
+}
+.card1{
+	height: 200px;
+	width: 200px;
+	border: 1px solid black;
+}
+
+
+.div8{
+	height: 300px;
+	width: 100%;
+	background: blue;
+	border: 1px solid black;
+	margin-top: 19px;
+	margin-left: 10px;
+
+
+}

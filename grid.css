@@ -553,10 +553,14 @@ box-shadow: 2px 2px 12px rgba(47,47,47,0.40);
 }
 .aditionallist{
 	width: 100%;
-	height: 326px;
+	height:50vh;
+	background-image: url('images/footerup.png');
+	background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 5px;
 }
 .aditionallist img{
-	width: 1350px;
+	width: 250vh;
 }
 .footer{
 	height: 45px;

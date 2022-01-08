@@ -1,8 +1,6 @@
 <?php
 
-$connn=mysqli_connect('localhost','root',"","website");
-
-
+$con=mysqli_connect('localhost','root',"","website");
 
 
 ?>

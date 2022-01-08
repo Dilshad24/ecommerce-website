@@ -1,7 +1,8 @@
 <?php
-include("db.php");
+
 include("functions/functions.php");
 include 'login-signup-page1/logincheck.php';
+$db=db();
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -122,7 +123,7 @@ include 'login-signup-page1/logincheck.php';
 
 <?php  
 function add_cart(){
-	$db=mysqli_connect('localhost','root',"","website");
+	
 	if(isset($_GET['add_cart'])){
         
         $ip_add = getrealipuser();
@@ -133,7 +134,7 @@ function add_cart(){
         $check_email=$_SESSION['email'];
         $check_product = "select * from cart where email='$check_email' AND p_id='$p_id'"; 
         //$check_product = "select * from cart where ip_add='$ip_add' AND p_id='$p_id'"; // when we what that one product can be added to cart bye one devece using is ip address of device 
-        $run_check = mysqli_query($db,$check_product);
+        $run_check = mysqli_query(db(),$check_product);
         
         if(mysqli_num_rows($run_check)>0){
             
@@ -144,7 +145,7 @@ function add_cart(){
             
             $query = "insert into cart (p_id,ip_add,qty,email) values ('$p_id','$ip_add','$product_qty','$check_email')";
             
-            $run_query = mysqli_query($db,$query);
+            $run_query = mysqli_query(db(),$query);
 
             echo "<script>window.open('product.php?pro_id=$p_id','_self')</script>";
 

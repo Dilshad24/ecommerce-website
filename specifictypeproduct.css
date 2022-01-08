@@ -1,3 +1,6 @@
+body{
+	overflow-x: hidden;
+}
 .backtoprevious{
 	padding-top: 85px;
 	height: 40px;

@@ -1,7 +1,7 @@
 <?php 
-
-$conn=mysqli_connect('localhost','root',"","website");
-
+include '/functions/functions.php';
+// $conn=mysqli_connect('localhost','root',"","website");
+$cnn=db();
 if(isset($_POST['query'])){
 	$inpText=$_POST['query'];
 	$query="select product_title from products where product_title LIKE '%$inpText%'";

@@ -66,6 +66,8 @@
 	display: inline-flex;
 	margin-bottom: 10px;
 
+	min-height: calc(100vh - 190px);
+
 }
 .ccontainer1{
 	width: 100%;

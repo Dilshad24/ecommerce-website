@@ -3,8 +3,9 @@
 error_reporting(0);
 ?>
 <?php
-include("db.php");
+// include("db.php");
 include("functions/functions.php");
+$con=db();
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -87,13 +88,13 @@ include("functions/functions.php");
 			if (isset($_GET['pro_id']))  {
 			$pro_id=$_GET['pro_id'];
 				$buy_pro="select * from products where id='$pro_id'";			
-				$run_buy_pro=mysqli_query($connn,$buy_pro);
+				$run_buy_pro=mysqli_query($con,$buy_pro);
 				$row_buy_pro=mysqli_fetch_array($run_buy_pro);
 				$pro_title=$row_buy_pro['product_title'];
 			echo "
 			<a href='specifictypeproduct.php' id='shop11'>Shop</a>
 			<p id='slash11'>|</p>
-			<a href='grid.php' id='b2home'  class='b2hc' style='color: #00b7ff;'>Home</a>
+			<a href='index.php' id='b2home'  class='b2hc' style='color: #00b7ff;'>Home</a>
 			<p>></p>
 			<a href='product.php?pro_id=$pro_id' id='b2cart' class='b2hc'>$pro_title</a>
 			<p>></p>
@@ -103,7 +104,7 @@ include("functions/functions.php");
 			echo "
 			<a href='specifictypeproduct.php' id='shop11'>Shop</a>
 			<p id='slash11'>|</p>
-			<a href='grid.php' id='b2home'  class='b2hc' style='color: #00b7ff;'>Home</a>
+			<a href='index.php' id='b2home'  class='b2hc' style='color: #00b7ff;'>Home</a>
 			<p>></p>
 			<a href='cart.php' id='b2cart' class='b2hc'>Cart</a>
 			<p>></p>
@@ -139,7 +140,7 @@ include("functions/functions.php");
 					$c_email=$_SESSION['email'];
 					$pro_id=$_GET['pro_id'];
 					$buy_pro="select * from products where id='$pro_id'";			
-					$run_buy_pro=mysqli_query($connn,$buy_pro);
+					$run_buy_pro=mysqli_query($con,$buy_pro);
 					$row_buy_pro=mysqli_fetch_array($run_buy_pro);
 					$pro_title=$row_buy_pro['product_title'];
 					$total=$row_buy_pro['product_price'];
@@ -153,7 +154,7 @@ include("functions/functions.php");
 					$c_email=$_SESSION['email'];
 					$connectio_cart="select * from cart where email='$c_email'";
 					$count_pro=0;			
-					$run_cart=mysqli_query($connn,$connectio_cart);
+					$run_cart=mysqli_query($con,$connectio_cart);
 					$total=0;
 					while ( $row_cart=mysqli_fetch_array($run_cart)) {
 					$count_pro+=1;	            	
@@ -161,7 +162,7 @@ include("functions/functions.php");
 					$pro_id=$row_cart['p_id'];
 					$pro_qty=$row_cart['qty'];
 					$get_products= "select * from products where id='$pro_id'";
-					$run_products=mysqli_query($connn,$get_products);
+					$run_products=mysqli_query($con,$get_products);
 					while($row_products= mysqli_fetch_array($run_products)){
 						$Sub_total=$row_products['product_price']*$pro_qty;	
 						$total+=$Sub_total;
@@ -217,14 +218,14 @@ if(isset($_POST['submit123'])){
 	$c_name=$_SESSION['username'];
 	$c_email=$_SESSION['email'];
 	$buy_pro="select * from products where id='$pro_id'";			
-	$run_buy_pro=mysqli_query($connn,$buy_pro);
+	$run_buy_pro=mysqli_query($con,$buy_pro);
 	$row_buy_pro=mysqli_fetch_array($run_buy_pro);
 	$pro_title=$row_buy_pro['product_title'];
 	$total=$row_buy_pro['product_price'];
 	$count_pro=1;	
 	$insertquery = "insert into orders (name,email,phone,address,date,payment_mode,country,city,products,amout_paid,invoice_no) 
 	values('$name','$c_email','$contact','$address',NOW(),'$paymentmethod','$country','$city','$count_pro','$total','$invoice_no')";
-	$iquery = mysqli_query($connn,$insertquery);
+	$iquery = mysqli_query($con,$insertquery);
 	echo "
 	<script >
 		alert('Checkout Successful')
@@ -250,7 +251,7 @@ if(isset($_POST['submit123'])){
 	$c_email=$_SESSION['email'];
 	$connection_cart="select * from cart where email='$c_email'";
 	$count_pro=0;			
-	$run_cart=mysqli_query($connn,$connection_cart);
+	$run_cart=mysqli_query($con,$connection_cart);
 	$total=0;
 	while ( $row_cart=mysqli_fetch_array($run_cart)) {
 	$count_pro+=1;	            	
@@ -258,7 +259,7 @@ if(isset($_POST['submit123'])){
 	$pro_id=$row_cart['p_id'];
 	$pro_qty=$row_cart['qty'];
 	$get_products= "select * from products where id='$pro_id'";
-	$run_products=mysqli_query($connn,$get_products);
+	$run_products=mysqli_query($con,$get_products);
 	while($row_products= mysqli_fetch_array($run_products)){
 		$Sub_total=$row_products['product_price']*$pro_qty;	
 		$total+=$Sub_total;
@@ -268,9 +269,9 @@ if(isset($_POST['submit123'])){
 			
 		$insertquery = "insert into orders (name,email,phone,address,date,payment_mode,country,city,products,amout_paid,invoice_no) 
 		values('$name','$c_email','$contact','$address',NOW(),'$paymentmethod','$country','$city','$count_pro','$total','$invoice_no')";
-		$iquery = mysqli_query($connn,$insertquery);
+		$iquery = mysqli_query($con,$insertquery);
 		$delete_product="delete from cart where email='$c_email'";
-		$run_delete=mysqli_query($connn,$delete_product);
+		$run_delete=mysqli_query($con,$delete_product);
 		echo "
 		<script >
 			alert('Checkout Successful')

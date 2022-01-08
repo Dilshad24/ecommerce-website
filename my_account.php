@@ -1,6 +1,7 @@
 <?php
-include("db.php");
+
 include("functions/functions.php");
+$con=db();
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -132,7 +133,7 @@ include("functions/functions.php");
 				$check_email=$_SESSION['email'];
 				if(isset($_POST['deletesub'])){
 					$delete_acc="delete from  logindatatable where email='$check_email'";
-					$run_delete_acc=mysqli_query($connn,$delete_acc);
+					$run_delete_acc=mysqli_query($con,$delete_acc);
 					header('location:login-signup-page1/logout.php');
 
 				}
@@ -192,12 +193,12 @@ if(isset($_POST['submit123'])){
 	$n_password=$_POST['npass'];
 	$check_email=$_SESSION['email'];
 	$psquery="select * from  logindatatable where email='$check_email'";
-	$run_psquery=mysqli_query($connn,$psquery);
+	$run_psquery=mysqli_query($con,$psquery);
 	$row_psquery= mysqli_fetch_array($run_psquery);
 	$current_pass=$row_psquery['password'];
 	if ($c_password==$current_pass) {
 		$pass_change="UPDATE logindatatable SET password = '$n_password' WHERE email = '$check_email'";
-		$run_pass_change=mysqli_query($connn,$pass_change);
+		$run_pass_change=mysqli_query($con,$pass_change);
 		echo "<script>alert('Password Change Sucessfull')</script>";
 
 	}
@@ -231,7 +232,7 @@ if(isset($_POST['submit123'])){
 							<?php
 							$check_email=$_SESSION['email'];
 							$add_orders="select * from orders where email='$check_email'";
-							$run_add_orders=mysqli_query($connn,$add_orders);
+							$run_add_orders=mysqli_query($con,$add_orders);
 							while ($row_add_orders= mysqli_fetch_array($run_add_orders)) {
 								$due_price=$row_add_orders['amout_paid'];
 								$noofpro=$row_add_orders['products'];
